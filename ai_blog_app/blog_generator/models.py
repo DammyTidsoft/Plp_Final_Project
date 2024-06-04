@@ -8,6 +8,6 @@ class BlogPost(models.Model):
     generated_content = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
     
-    def__str__(self):
+    def __str__(self):
         return self.youtube_title
 #You will need to make migration after you have finish writing this database
