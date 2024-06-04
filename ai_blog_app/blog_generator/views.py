@@ -46,7 +46,7 @@ def generate_blog(request):
            return JsonResponse({'error': 'Failed to get transcript'}, status=500) 
     #use OpenAI to generate the blog
     blog_content = generated_blog_fro_transcription(transription)
-    if not blog_content
+    if not blog_content:
         return JsonResponse({'error': 'Failed to generate blog article'}, status=500) 
     #save blog article to database
      new_blog_article = BlogPost.object.create{
@@ -59,8 +59,8 @@ def generate_blog(request):
     #returnblog article as a response
     return JsonResponse({'content': blog_content})
 def  yt_title(link):
-    yt = Youtube(link)
-    title = yt.title
+        yt = Youtube(link)
+        title = yt.title
     return title
 def download_audio(link):
     yt = YouTube(link)
