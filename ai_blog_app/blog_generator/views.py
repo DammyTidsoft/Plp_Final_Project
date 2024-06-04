@@ -21,7 +21,6 @@ import os
 import assemblyai as aai
 #you will also need to install assemblyai. use pip install openai
 import openai
-#ai key --> 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
 # Create your views here.
 from .models import BlogPost #this is where you import your database
 @login_required
